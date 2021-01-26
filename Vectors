@@ -1,0 +1,106 @@
+###### creating vectors ######
+
+> vector1<-c(12,15,3,5)
+> vector1
+[1] 12 15  3  5
+
+> vector2<-c("jan","feb","mar","apr")
+> vector2
+[1] "jan" "feb" "mar" "apr"
+
+> vetor3<-scan() #allow input values
+1: 1
+2: 6
+3: 7
+4: 9
+5: 
+Read 4 items
+> vetor3
+[1] 1 6 7 9
+
+###### accessing vectors ######
+The first posicion is 1
+> vetor1[1]
+[1] 12
+> vetor1[c(1,3)] #to show more than one posicion
+[1] 12  3
+> vetor1[1:3] #to show positions 1 to 3
+[1] 12 15  3
+
+###### editing elements of vector ######
+> vector1[1]<-11
+> vector1[1]
+[1] 11
+> vector1[c(1,2)]<-c(10,14)
+> vector1[c(1,2)]
+[1] 10 14
+> ###### deleting elements of vector ######
+> vector1<-vector1[-1]
+> vector1
+[1] 14  3  5
+> ###### addcting elements of vector ######
+> vetor1[4]<-12
+> vetor1
+[1] 14  3  5 12
+> ###### editing all of elements in a vector ######
+> vector1
+[1] 14  3  5 12
+> vector1<-vector1+1
+> vector1
+[1] 15  4  6 13
+> vector1<-vector1-1
+> vector1
+[1] 14  3  5 12
+> vector1<-vector1*2
+> vector1
+[1] 28  6 10 24
+> vector1<-vector1^2
+> vector1
+[1] 784  36 100 576
+
+> ###### using a vector ######
+> a<-log(vector1)
+> a
+[1] 6.664409 3.583519 4.605170 6.356108
+> b<-mean(vector1)
+> b
+[1] 374
+> c<-max(vector1)
+> c
+[1] 784
+> d<-min(vector1)
+> d
+[1] 36
+> e<-sqrt(vector1)
+> e
+[1] 28  6 10 24
+> ###### operations between vectors######
+
+#just allow in vector with the same size
+> 
+> vector1<-vector1+vector1*2
+> vector1
+[1] 7056  324  900 5184
+> ###### union, intercepcion and differencess ######
+> 
+> sale1<-c("Nike","Adidas","Olympikus")
+> sale2<-c("Adidas","Mizuno","topper")
+> 
+> union1=union(sale1,sale2)
+> union1
+[1] "Nike"      "Adidas"    "Olympikus" "Mizuno"    "topper"   
+> intersection1_2=intersect(sale1,sale2)
+> intersection1_2
+[1] "Adidas"
+> difserence1=setdiff(sale1,sale2)
+> difference1
+[1] "Nike"      "Olympikus"
+> difference2=setdiff(sale2,sale1)
+> difference2
+[1] "Mizuno" "topper"
+> ######matching two vectors######
+> interaction1=interaction(difference1,difference2)
+> interaction1
+[1] Nike.Mizuno      Olympikus.topper
+Levels: Nike.Mizuno Olympikus.Mizuno Nike.topper Olympikus.topper
+>
