@@ -1,0 +1,106 @@
+
+##### matrix #####
+
+##### creating matrices ######
+
+#creation of 2 vector
+products<- c("shoes", "shirt", "skirt", "dress")
+sales<-c(10,20,15,30)
+products
+sales
+
+> products
+[1] "shoes" "shirt" "skirt" "dress"
+> sales
+[1] 10 20 15 30
+
+#put the vector in columns
+mat1<-cbind(products,sales)
+mat1
+
+> mat1
+     products sales
+[1,] "shoes"  "10" 
+[2,] "shirt"  "20" 
+[3,] "skirt"  "15" 
+[4,] "dress"  "30" 
+>
+
+#put the vector in lines
+mat2<-rbind(products,sales)
+mat2
+
+> mat2
+         [,1]    [,2]    [,3]    [,4]   
+products "shoes" "shirt" "skirt" "dress"
+sales    "10"    "20"    "15"    "30"  
+
+#creating by function "matrix"
+
+#matrix(elements, nrow= number_of_lines, ncol= nunber_of_columns)
+
+mat3=matrix(1:20,nrow=4, ncol=5) #by col
+mat3
+
+> mat3
+     [,1] [,2] [,3] [,4] [,5]
+[1,]    1    5    9   13   17
+[2,]    2    6   10   14   18
+[3,]    3    7   11   15   19
+[4,]    4    8   12   16   20
+
+mat4=matrix(1:20,nrow=4, ncol=5, byrow=T) #by row
+mat4
+
+> mat4
+     [,1] [,2] [,3] [,4] [,5]
+[1,]    1    2    3    4    5
+[2,]    6    7    8    9   10
+[3,]   11   12   13   14   15
+[4,]   16   17   18   19   20
+
+mat5=matrix("Brazil",nrow=4, ncol=5)
+mat5
+
+> mat5
+     [,1]     [,2]     [,3]     [,4]     [,5]    
+[1,] "Brazil" "Brazil" "Brazil" "Brazil" "Brazil"
+[2,] "Brazil" "Brazil" "Brazil" "Brazil" "Brazil"
+[3,] "Brazil" "Brazil" "Brazil" "Brazil" "Brazil"
+[4,] "Brazil" "Brazil" "Brazil" "Brazil" "Brazil"
+
+
+mat6=matrix(0,nrow=4, ncol=5)
+mat6
+> mat6
+     [,1] [,2] [,3] [,4] [,5]
+[1,]    0    0    0    0    0
+[2,]    0    0    0    0    0
+[3,]    0    0    0    0    0
+[4,]    0    0    0    0    0
+
+##### Accesssing matrices #####
+
+#name_of_matrix[linha,coluna]
+
+mat1_1_1=mat1[1,1]
+mat1_1_1
+
+> mat1_1_1
+products 
+ "shoes" 
+
+mat1_1=mat1[1,] #all of line 1
+mat1_1
+> mat1_1
+products    sales 
+ "shoes"     "10"
+ 
+mat1_0_1=mat1[,1]
+mat1_0_1
+> mat1_0_1
+[1] "shoes" "shirt" "skirt" "dress" #all of column 1
+
+
+
+
