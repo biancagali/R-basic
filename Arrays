@@ -1,0 +1,52 @@
+##### creating with matrices #####
+#array(elements, dim, dim_names)
+
+m1=matrix(1:20,4,5)
+a1=array(m1,dim= c(4,5,1))#m1, 4 lines 5 columns, 1 matrix.
+a1
+
+> a1
+, , 1
+
+     [,1] [,2] [,3] [,4] [,5]
+[1,]    1    5    9   13   17
+[2,]    2    6   10   14   18
+[3,]    3    7   11   15   19
+[4,]    4    8   12   16   20
+
+
+a2=array(m1,dim= c(4,5,2))#m1, 4 lines 5 columns, 2 matrices.
+a1
+a2
+
+> a2
+, , 1
+
+     [,1] [,2] [,3] [,4] [,5]
+[1,]    1    5    9   13   17
+[2,]    2    6   10   14   18
+[3,]    3    7   11   15   19
+[4,]    4    8   12   16   20
+
+, , 2
+
+     [,1] [,2] [,3] [,4] [,5]
+[1,]    1    5    9   13   17
+[2,]    2    6   10   14   18
+[3,]    3    7   11   15   19
+[4,]    4    8   12   16   20
+
+##### creating by vectors #####
+
+
+v1=c("TV","Sofa","Pillow")
+v2=c(50,30,100)
+
+a3=array(c(v1,v2),dim= c(3,2))#v1 and v2, 3 lines 2 columns, 1 matrix.
+a3
+
+> a3
+     [,1]     [,2] 
+[1,] "TV"     "50" 
+[2,] "Sofa"   "30" 
+[3,] "Pillow" "100"
